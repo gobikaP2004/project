@@ -1,0 +1,42 @@
+import java.util.*;
+class SHOPMARKET
+{
+    String shopname;
+    String items;
+    int quantity;
+    double price;
+    public void setValues(String shopname,String items,int quantity,double price){
+        this.shopname = shopname;
+        this.items = items;
+        this.quantity = quantity;
+        this.price=price;
+    }
+    public void display(){
+        System.out.println("shopname: "+shopname);
+        System.out.println("items: "+items);
+        System.out.println("quantity: "+quantity);
+         System.out.println("price: "+price);
+    }
+}
+class Main {
+public static void main(String[] args) {
+   SHOPMARKET obj = new SHOPMARKET();
+    obj.shopname = "kannan";
+        obj.items = "dhal";
+        obj.quantity = 5;
+        obj.price=67.93;
+   obj.display();
+
+SHOPMARKET visitor = new SHOPMARKET();
+visitor.shopname = "kannan";
+visitor.items = "oil";
+visitor.quantity = 2;
+visitor.price=100.00;
+visitor.display();
+
+SHOPMARKET visitor2 = new SHOPMARKET();
+Scanner sc = new Scanner(System.in);
+visitor2.setValues(sc.nextLine(),sc.nextLine(),sc.nextInt(),sc.nextDouble());
+visitor2.display();
+}
+}
